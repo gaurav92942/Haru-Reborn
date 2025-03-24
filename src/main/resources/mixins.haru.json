@@ -1,0 +1,42 @@
+{
+    "required": true,
+    "package": "cc.unknown.mixin.mixins",
+    "refmap": "mixins.haru.refmap.json",
+    "compatibilityLevel": "JAVA_8",
+    "mixins": [
+    	"MixinMinecraft",
+    	
+    	"entity.MixinEntity",
+    	"entity.MixinEntityLivingBase",
+    	"entity.MixinEntityPlayer",
+    	"entity.MixinEntityPlayerSP",
+    	"entity.MixinPlayerControllerMP",
+    	"entity.MixinMovementInputFromOptions",
+    	
+    	"gui.MixinGuiIngame",
+    	"gui.MixinGuiSpectator",
+    	"gui.MixinGuiMainMenu",
+    	"gui.MixinGuiAchievement",
+    	
+    	"network.MixinFMLCommonHandler",
+    	"network.MixinNetHandlerPlayClient",
+    	"network.MixinNetworkManager",
+    	"network.MixinFMLHandshakeMessage",
+    	
+    	"packets.MixinC00Handshake",
+    	"packets.MixinC02PacketUseEntity",
+    	"packets.MixinS14PacketEntity",
+    	"packets.MixinC01PacketChatMessage",
+    	
+    	"render.MixinEntityRenderer",
+    	"render.MixinItemRenderer",
+    	"render.MixinRendererLivingEntity",
+    	"render.MixinFMLClientHandler",
+    	"render.MixinRender",
+    	    	
+    	"spamfix.MixinGuiScreenOptionsSounds_PacketSpam",
+    	"spamfix.MixinScoreboard_FixLogSpam",
+    	"spamfix.MixinSoundManager_LogSpam",
+    	
+    ]
+}

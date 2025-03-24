@@ -1,0 +1,38 @@
+name: Build
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Java setup
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'adopt'
+          java-version: 8
+          cache: gradle
+
+      - name: Build
+        run: |
+          chmod +x ./gradlew
+          ./gradlew setupCiWorkspace --no-daemon
+          ./gradlew clean --no-daemon
+          ./gradlew build --no-daemon --refresh-dependencies
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: haru
+          path: build/libs/

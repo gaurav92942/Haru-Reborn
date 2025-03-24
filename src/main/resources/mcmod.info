@@ -1,0 +1,14 @@
+[
+    {
+        "modid": "haru",
+        "name": "haru",
+        "description": "ghost client",
+        "version": "3.5",
+        "updateUrl": "",
+        "authorList": ["Cvr"],
+        "credits": "Kopamed & Tryffle",
+        "logoFile": "",
+        "screenshots": [],
+        "dependencies": []
+    }
+]

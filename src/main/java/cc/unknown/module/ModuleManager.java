@@ -38,7 +38,8 @@ public class ModuleManager implements Loona {
 				new Reach(),
 				new WTap(),
 				new Velocity(),
-				
+                                new HitSelect(),
+			
 				// exploit
 				new ChatBypass(),
 				new PingSpoof(),
